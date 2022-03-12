@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.54.0'
+project:
+    name: Property-Base
+    package:
+        name: Property-Base
+        api_version: '52.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/Property-Base/tests
+            options:
+                outputdir: robot/Property-Base/results
+
+    robot_testdoc:
+        options:
+            path: robot/Property-Base/tests
+            output: robot/Property-Base/doc/Property-Base_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
